@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>My GitHub</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" type="image/png" href="./github-mark.png" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="left_card">
+            <div class="left_card_content">
+                <div class="profileImage">
+                    <img
+                    class="image"
+                    src="./default_profile.png"
+                  />
+                </div>
+                <div class="info">
+                    <p class="name"></p>
+                    <p class="link"></p>
+                    <p class="loc"></p>
+                </div>
+            </div>
+            <div class="bio">
+                <p class="bio" id="bio"></p>
+            </div>
+            <div class="lang">
+                <p class="lang" id="lang"></p>
+            </div>
+        </div>
+        <div class="right_card">
+            <form class="right_content">
+                <label for="user">Enter Username:</label>
+                <input type="text" id="user" maxlength="255">
+                <button class="search_button">search</button>
+                <p class="error style">User not found</p>
+            </form>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+
+</html>
