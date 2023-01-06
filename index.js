@@ -1,3 +1,4 @@
+// selecting required properties
 const imageOutput = document.querySelector('.image');
 const nameOutput = document.querySelector('.name');
 const linkOutput = document.querySelector('.link');
@@ -7,7 +8,7 @@ const userInput = document.querySelector('#user');
 const searchInput = document.querySelector('.search_button');
 const errorOutput = document.querySelector('.error');
 const langOutput = document.querySelector('.lang')
-
+// main function to get username from textbox and send a get request to github to get repos and user info, handled some errors aswell
 async function searchGit(e){
     e.preventDefault();
     let username = userInput.value;
@@ -39,7 +40,7 @@ async function searchGit(e){
         return;
     }
 }
-
+// setting the various properties
 function setUser(obj){
     nameOutput.innerHTML=obj.name;
     linkOutput.innerHTML=obj.blog;
@@ -48,7 +49,7 @@ function setUser(obj){
     bioOutput.innerHTML=bio;
     imageOutput.setAttribute("src", obj.avatar_url);
 }
-
+// saving required properties on local storage
 function saveUser(obj){
     const userObj = {
         login: obj.login,
@@ -60,7 +61,7 @@ function saveUser(obj){
     }
     window.localStorage.setItem(obj.login, JSON.stringify(userObj));
 }
-
+// splitting the newest 5 repos from all and ranking used languages, setting the favourite language at the end
 function setlang(obj){
     langs = []
     for(i = 0; i < 5; i++){
@@ -86,6 +87,6 @@ function setlang(obj){
     }
     langOutput.innerHTML="Favourite language = " + fav;
 }
-
+// added event listener to button on click and cleared local storage for later use
 searchInput.addEventListener('click', searchGit);
 window.localStorage.clear();

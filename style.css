@@ -1,3 +1,4 @@
+/* styling content of right card */
 .right_content{
     display: flex;
     flex-direction: column;
@@ -5,7 +6,7 @@
     margin-left: 10px;
     margin-top: 40%;
 }
-
+/* styling content of left card */
 .left_card_content{
     display: flex;
     flex-direction: row;
@@ -13,7 +14,7 @@
     margin-left: 10px;
     margin-top: 10px;
 }
-
+/* styling the main container itself */
 .container{
     width: 50%;
     min-height: 60%;
@@ -35,37 +36,37 @@
     align-items: center;
     justify-content: space-around;
 }
-
+/* fixing the position of profile image */
 .image{
     max-width: 200px;
     max-height: 150px;
     margin-right: 20px;
     border-radius: 10px;
 }
-
+/* added the background */
 body {
     background: url("./style/background.png");
     background-size: cover;
 }
-
+/* styling left card */
 .left_card{
     background-color: white;
     border-radius: 10px;
     height: 250px;
 }
-
+/* styling bio */
 .bio{
     margin-left: 10px;
     margin-right: 10px;
 }
-
+/* styling right card */
 .right_card{
     background-color: white;
     border-radius: 10px;
     margin-left: 20px;
     height: 250px;
 }
-
+/* styling the search button */
 .search_button{
     background-color: #550a8a;
     border-color: #550a8a   ;
@@ -73,20 +74,20 @@ body {
     border-radius: 5px;
     margin-top: 5px;
 }
-
+/* fixing users position */
 #user{
     border-radius: 5px;
 }
-
+/* hiding the error paragraph */
 .error{
     display: none;
 }
-
+/* error paragraph style, used innerhtml.classlist.remove in js so we seperated the style from it */
 .style{
     color: red;
     font-weight: bold;
 }
-
+/* fixing favourite language paragraph's position */
 .lang{
     margin-left: 10px;
 }
