@@ -20,13 +20,13 @@ async function searchGit(e){
         if (saved == null || saved.login != username){
             response = await fetch(`https://api.github.com/users/${username}`);
             obj = await response.json();
-            repos = await fetch(obj.repos_url);
-            repos = await repos.json();
             if (response.status != 200){
                 errorOutput.innerHTML="USER NOT FOUND!";
                 errorOutput.classList.remove('error');
                 return;
             }
+            repos = await fetch(obj.repos_url);
+            repos = await repos.json();
         }
         else{
             obj = saved;
