@@ -12,6 +12,7 @@ const langOutput = document.querySelector('.lang')
 async function searchGit(e){
     e.preventDefault();
     let username = userInput.value;
+    errorOutput.innerHTML="";
     try {
         let saved = JSON.parse(window.localStorage.getItem(username));
         let response;
@@ -27,10 +28,11 @@ async function searchGit(e){
             }
             repos = await fetch(obj.repos_url);
             repos = await repos.json();
+            console.log(repos)
         }
         else{
             obj = saved;
-        }   
+        } 
         setUser(obj);
         saveUser(obj);
         setlang(repos);
@@ -42,6 +44,21 @@ async function searchGit(e){
 }
 // setting the various properties
 function setUser(obj){
+    if (obj.name == null){
+        obj.name = ""
+    }
+    if (obj.blog == null){
+        obj.blog = ""
+    }
+    if (obj.bio == null){
+        obj.bio = ""
+    }
+    if (obj.location == null){
+        obj.location = ""
+    }
+    if (obj.avatar_url == null){
+        obj.avatar_url = "./style/default_profile.png"
+    }
     nameOutput.innerHTML=obj.name;
     linkOutput.innerHTML=obj.blog;
     locOutput.innerHTML=obj.location;
@@ -64,11 +81,16 @@ function saveUser(obj){
 // splitting the newest 5 repos from all and ranking used languages, setting the favourite language at the end
 function setlang(obj){
     langs = []
-    for(i = 0; i < 5; i++){
+    let len = Object.keys(obj).length;
+    if (len > 5){
+        len = 5;
+    }
+    for(i = 0; i < len; i++){
         langs.push(obj[i].language)
     }
+    
     console.log(langs);
-    let fav = null;
+    let fav = "None";
     let top_point = 0;
     for(i = 0; i < 5; i++){
         if (langs[i] == null){
