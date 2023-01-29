@@ -8,7 +8,7 @@ In this project the goal is to create a website that sends some GET requests to 
 
 The webpage is currenty available at https://bornfromashes.github.io/githubsearch/
 
-All you have to do is type in the username of a github user and you'll more info about them!
+All you have to do is type in the username of a github user and you'll get more info about them!
 
 ## Known Issues
 
