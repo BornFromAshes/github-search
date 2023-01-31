@@ -78,5 +78,5 @@ All you have to do is type in the username of a github user and you'll get more 
 
 ## Known Issues
 
-There aren't currently any issues so far so if you find any please create an issue on this repository.
-also this was my first time working with HTML, CSS and JS so the way that I wrote the program might not be the best way possible (probably isn't) so if you can improve this project in any regards I will appreciate that aswell.
+There aren't currently any known issues so far. If you find any please create an issue on this repository.
+Also this was my first time working with HTML, CSS and JS so the way that I wrote the program might not be the best way possible (probably isn't) so if you can improve this project in any regards I will appreciate that aswell.
