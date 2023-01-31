@@ -1,4 +1,4 @@
-# GithubSearch
+# Github search
 
 GitHub is a very famous service in the field of maintaining and versioning source codes. Many of you use this service on a daily basis. We intend to interact with this service by using the programming interfaces and extract the information of a user.
 
